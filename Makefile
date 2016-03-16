@@ -20,7 +20,6 @@ $(VENV_ACTIVATE):
 
 .PHONY: setup
 setup: venv
-	$(WITH_VENV) pip install -r requirements.txt
 	$(WITH_VENV) pip install -r requirements_test.txt
 
 .PHONY: dev_setup

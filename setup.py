@@ -3,8 +3,6 @@ import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.md')).read()
-reqs = filter(
-    None, open(os.path.join(here, 'requirements.txt')).read().split('\n'))
 namespace = {}
 version_py = open(os.path.join(here, 'rds_cp', 'version.py')).read()
 exec(version_py, namespace)
@@ -35,7 +33,10 @@ setup(
     py_modules=['rds_cp.rds_cp', 'rds_cp.version'],
     include_package_data=True,
     zip_safe=False,
-    install_requires=reqs,
+    install_requires=[
+        'boto3==1.1.1',
+        'docopt',
+    ],
     entry_points={
         'console_scripts': [
             'rds_cp = rds_cp.rds_cp:main',
