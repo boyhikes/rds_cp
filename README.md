@@ -31,7 +31,6 @@ $ pip3 install rds_cp
 ## Example usage
 
 ```
-$ make install
 $ AWS_DEFAULT_REGION=us-west-2 \
   AWS_ACCESS_KEY_ID=xxx \
   AWS_SECRET_ACCESS_KEY=yyy \
