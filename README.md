@@ -25,7 +25,7 @@ See [the docstring](rds_cp/rds_cp.py).
 This package requires Python 3.
 
 ```sh
-$ pip install rds_cp
+$ pip3 install rds_cp
 ```
 
 ## Example usage
