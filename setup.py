@@ -34,7 +34,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'boto3==1.1.1',
+        'boto3==1.4.4',
         'docopt',
     ],
     entry_points={
