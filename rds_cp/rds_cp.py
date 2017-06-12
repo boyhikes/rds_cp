@@ -239,14 +239,14 @@ def rename_instance(rds, instance_name: str, new_name: str) -> bool:
     # We have to manually sleep loop until the rename takes effect; boto3
     # doesn't provide a `waiter` for this.
     renamed_yet = False
-    tries_left = 100
+    tries_left = 60
 
     while tries_left >= 0 and not renamed_yet:
         if instance_exists(rds, new_name):
             renamed_yet = True
         else:
             tries_left -= 1
-            time.sleep(3)
+            time.sleep(30)
 
     if not renamed_yet:
         log.fatal(
